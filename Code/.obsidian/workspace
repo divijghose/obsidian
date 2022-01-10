@@ -1,0 +1,99 @@
+{
+  "main": {
+    "id": "b1e41989a90fd07b",
+    "type": "split",
+    "children": [
+      {
+        "id": "ffad090592cab0dc",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Git.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "53620674ffe625ae",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd18457bfbba06de",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7378226969b41a2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "5afde31bfd9df9e5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1b3a95304393b5de",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b9137a235d07b4b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "685c9776656d27c6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Git.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ffad090592cab0dc",
+  "lastOpenFiles": [
+    "Git.md",
+    "SSH.md",
+    "VSCode.md",
+    "ParMooN.md",
+    "Markdown.md",
+    "Doxygen.md"
+  ]
+}
