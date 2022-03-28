@@ -106,3 +106,14 @@ __To change current URL__
 ```
 git remote set-url origin git+ssh://git@github.com/username/reponame.git
 ```
+
+## Deleting Branch
+1. Deleting local branch
+```
+git branch -d <branch-name
+```
+
+2. Deleting remote branch 
+```
+git push origin --delete <branch-name>
+```git remote 

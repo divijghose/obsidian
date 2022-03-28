@@ -96,3 +96,102 @@ arr.drop_sel(x=x_value)
 ```
 
 4. Interpolation
+`interp` to look at values between grid points 
+```
+arr.interp(x=new_x_values,y=new_y_values)
+```
+if object with desired coordinates for interpolation already exists, use `interp_like`
+
+```
+arr.interp_like(other_array)
+```
+
+# Computation with xarray
+1. Applying operators
+```
+ds + const
+np.log(ds)
+ds**2
+```
+2. Applying user functions
+```
+xr.apply_ufunc(func,ds)
+```
+
+3. Reductions 
+```
+ds.mean(dim=dim1)
+```
+
+4. Weighted Reductions
+First create a `DataArrayWeighted` object then apply reduction to it
+```
+ds_weighted = ds.weighted(weights)
+ds_weighted.mean(dim=dim1)
+```
+
+5. Groupby
+`DateTimeAccesor` -> `ds.time.dt.month`
+
+Groupby dimesnion
+```
+gb = ds.grouypby(ds.time.dt.month)
+```
+Applying aggregration 
+```
+ds_mm = gb.mean(dim="time")
+```
+
+6. Mapping
+Apply function to each dataset
+```
+gb.map(ds)
+``` 
+7. Transformations
+Remove mean of group from grouped data 
+```
+gb = ds.groupby("time.month")
+ds_var = gb - gb.mean(dim="time")
+```
+
+8. Resample 
+```
+resample_obj = ds.resample(time="5Y")
+```
+
+9. Rolling 
+Performs rolling window calculation over given length `e.g. 7 day average,12 month average`
+```
+rolling_obj = ds.rolling(time=12,center=True)
+```
+
+10. Coarsen
+Like `resample`, works on multiple dimesnions
+```
+coarsen_obj = ds.coarsen(time=12)
+```
+
+# Plotting and visualization
+## Basic plotting
+
+DataArray objects have a `plot` method. This method creates plots using `matplotlib` so all of your existing matplotlib knowledge carries over!
+
+By default `.plot()` makes
+
+1.  a line plot for 1-D arrays using `plt.plot()`
+2.  a `pcolormesh` plot for 2-D arrays using `plt.pcolormesh()`
+3.  a histogram for everything else using `plt.hist()`
+
+# Dask
+1. Set up simple LocalCluster
+```
+from dask.distributed import Client
+
+client = Client()
+```
+3. Dask Arrays
+```
+import dask.array as da
+
+ones=da.ones(shape)
+```
